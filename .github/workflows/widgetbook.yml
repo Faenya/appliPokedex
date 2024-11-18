@@ -32,7 +32,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: "https://github.com/tcht-marie/appliPokedex/actions/runs/11893865872/artifacts/**"
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
